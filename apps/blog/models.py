@@ -29,7 +29,7 @@ class News(models.Model):
 
     @property
     def likes(self):
-        return self.news_like.objects.all().count()
+        return self.news_like.all().count()
 
 
 class Like(models.Model):
