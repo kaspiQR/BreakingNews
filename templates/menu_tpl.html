@@ -1,0 +1,8 @@
+<div class="{{menu_class}}">
+    <ul class="navigation-list">
+        <li class="logo"><a href="{% url 'home' %}">LOGO</a></li>
+        {% for item in categories %}
+            <li><a href="{% url 'get_category' item.slug %}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

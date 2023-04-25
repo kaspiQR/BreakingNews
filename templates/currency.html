@@ -1,0 +1,79 @@
+<div class="page-exchange grid-template">
+    <div class="page-exchange__currency {{block_class}}">
+        <div class="summary">
+            <table class="summary-currencies" cellspacing="0">
+                <thead></thead>
+                <tbody>
+                    {% for c in currency%}
+                        <tr>
+                            <td class="table-symbol">{{c.symbol}}</td>
+                            <td class="table-price">
+                                <span>{{c.price}}</span>
+                                <img src="{{c.price_change_icon_src}}" alt="angle">
+                                <span class="price-change {{c.change_color}}">{{c.price_change}}</span>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="page-exchange__crypto">
+        <div class="summary-table">
+            <div class="summary-table__title">
+                <h4>КРИПТОВАЛЮТЫ <span> / USD</span></h4>
+            </div>
+            <div class="summary-table__data">
+                {% for c in crypto_data %}
+                    <div class="summary-table__column">
+                        <h6>{{ c.pair }}</h6>
+                        <h5>
+                            {{ c.price }}
+                            <img src="{{c.price_change_icon_src}}" alt="angle">
+                        </h5>
+                        <span class="price-change {{ c.change_color }}">{{c.price_change}}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="page-exchange__petrol">
+        <div class="summary-table">
+            <div class="summary-table__title">
+                <h4>НЕФТЬ И ГАЗ <span> / USD</span></h4>
+            </div>
+            <div class="summary-table__data">
+                {% for c in petrol_data %}
+                    <div class="summary-table__column">
+                        <h6>{{ c.pair }}</h6>
+                        <h5>
+                            {{ c.price }}
+                            <img src="{{c.price_change_icon_src}}" alt="angle">
+                        </h5>
+                        <span class="price-change {{ c.change_color }}">{{c.price_change}}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="page-exchange__metal">
+        <div class="summary-table">
+            <div class="summary-table__title">
+                <h4>МЕТАЛЛЫ <span> / USD</span></h4>
+            </div>
+            <div class="summary-table__data">
+                {% for c in metal_data %}
+                    <div class="summary-table__column">
+                        <h6>{{ c.pair }}</h6>
+                        <h5>
+                            {{ c.price }}
+                            <img src="{{c.price_change_icon_src}}" alt="angle">
+                        </h5>
+                        <span class="price-change {{ c.change_color }}">{{c.price_change}}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

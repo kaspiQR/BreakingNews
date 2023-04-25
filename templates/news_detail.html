@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="news-wrapper">
+            <div class="news-inner-detail">
+                <img src="{{ n.image.url }}" alt="news-image">
+                <h2>{{ n.title }}</h2>
+                <p>{{ n.description }}</p>
+                <span class="author">{{ n.author }}</span>
+                <span class="date">{{ n.created }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

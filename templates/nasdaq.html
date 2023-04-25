@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="{{block_class}} index-data grid-template">
+        {% for i in indexes %}
+        <div class="index-data__item">
+            <div class="index-data__item-top">
+                <div class="index-data__item-title">{{i.name}}</div>
+                <div class="index-data__item-price">{{i.price}}
+                    <span>{{i.icon | safe}}</span>
+                </div>
+            </div>
+            <div class="index-data__item-bottom">
+                <div class="exchange">{{ i.exchange }}</div>
+                <div class="diff {{i.change_color}}">{{i.diff}}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
